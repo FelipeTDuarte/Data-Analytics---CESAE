@@ -1,0 +1,17 @@
+cliente |NIF || NCC | nome | endereco |
+
+reserva |ID || data| data_retorno | data_Levantamento | #NIF -> cliente (NN)| #nome_loja -> loja | #nome_modelo -> modelo (NN) | 
+
+loja | nome || rua | numPorta | codPostal | coordGPS |
+
+modelo | nome || numVelocidade | #id -> tipo (NN) |
+
+tipo | ID || tipo |
+
+bicicleta | ID || #nome_modelo -> modelo (NN) |
+
+3 tipos:
+1-1
+1-N / N-1
+M-N
+
