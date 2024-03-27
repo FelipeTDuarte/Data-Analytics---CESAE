@@ -1,0 +1,39 @@
+CREATE TABLE Mae
+(
+cc VARCHAR (11) NOT NULL,
+Nome VARCHAR (60) NOT NULL,
+endereco VARCHAR (60) NOT NULL,
+Data_Nascimento DATE,
+Telefone CHAR (9),
+Acompanhante VARCHAR (60)
+PRIMARY KEY (cc) );
+
+CREATE TABLE Bebe
+(
+n_registo INT NOT NULL AUTO_INCREMENT,
+Nome VARCHAR (60) NOT NULL,
+Data_Nascimento DATE NOT NULL,
+hora_Nascimento DATA NOT NULL,
+peso REAL NOT NULL,
+altura REAL NOT NULL,
+cc_mae VARCHAR (11) NOT NULL,
+cedula_medico VARCHAR (*) NOT NULL,
+nif_enfermeira CHAR (9) NOT NULL,
+PRIMARY KEY (n_registo) );
+
+CREATE TABLE Medico
+(
+cedula VARCHAR (*) NOT NULL,
+Nome VARCHAR (60) NOT NULL,
+Telefone CHAR (9) NOT NULL,
+nif CHAR (9) NOT NULL,
+especialidade VARCHAR (50) NOT NULL,
+PRIMARY KEY (cedula) );
+
+CREATE TABLE Enfermeira
+(
+nif CHAR (9) NOT NULL,
+Nome VARCHAR (60) NOT NULL,
+morada VARCHAR (100) NOT NULL,
+Telefone CHAR (9) NOT NULL,
+PRIMARY KEY (nif) );
